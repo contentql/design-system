@@ -16,6 +16,7 @@ import SvgColor from 'src/components/svg-color';
 import { HEADER } from 'src/layouts/config-layout';
 import { useResponsive } from 'src/hooks/use-responsive';
 import { useBoundingClientRect } from 'src/hooks/use-bounding-client-rect';
+import { Chip } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
@@ -67,23 +68,35 @@ export default function HomeHero() {
               </Typography>
 
               <Typography sx={{ color: 'text.secondary' }}>
-                ContentQL is an open-source-based Architecture as a Service with
-                modern technologies that enables{' '}
-                <span className='underline underline-offset-4 decoration-2 font-semibold text-[#6E00FF]'>
-                  Product Development & Marketing
-                </span>{' '}
+                ContentQL is an Architecture as a Service with modern
+                technologies that enables{' '}
+                <Chip
+                  label='Product Development & Marketing'
+                  variant='outlined'
+                  color='primary'
+                  size='small'
+                />
                 teams to{' '}
-                <span className='underline underline-offset-4 decoration-2 font-semibold text-[#6E00FF]'>
-                  work & control
-                </span>{' '}
+                <Chip
+                  label='work & control'
+                  variant='outlined'
+                  color='primary'
+                  size='small'
+                />{' '}
                 the{' '}
-                <span className='underline underline-offset-4 decoration-2 font-semibold text-[#6E00FF]'>
-                  Product & Content
-                </span>{' '}
+                <Chip
+                  label='Product & Content'
+                  variant='outlined'
+                  color='primary'
+                  size='small'
+                />{' '}
                 to be{' '}
-                <span className='underline underline-offset-4 decoration-2 font-semibold text-[#6E00FF]'>
-                  Delivered & Displayed
-                </span>{' '}
+                <Chip
+                  label='Delivered & Displayed'
+                  variant='outlined'
+                  color='primary'
+                  size='small'
+                />{' '}
                 to the end users without worrying about a dedicated developer
                 team.
               </Typography>
