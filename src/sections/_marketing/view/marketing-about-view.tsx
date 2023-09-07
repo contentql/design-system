@@ -30,7 +30,7 @@ export default function MarketingAboutView() {
 
       {/* <MarketingAboutOurClients brands={_brandsColor} /> */}
 
-      <MarketingTestimonial testimonials={_testimonials} />
+      {/* <MarketingTestimonial testimonials={_testimonials} /> */}
 
       {/* <MarketingLandingFaqs /> */}
 
