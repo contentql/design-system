@@ -66,9 +66,11 @@ export const paths = {
   // Auth
   loginCover: '/auth/login-cover',
   loginBackground: '/auth/login-background',
+  login: '/auth/login',
   loginIllustration: '/auth/login-illustration',
   registerCover: '/auth/register-cover',
   registerBackground: '/auth/register-background',
+  register: '/auth/register',
   registerIllustration: '/auth/register-illustration',
   forgotPassword: '/auth/forgot-password',
   verify: '/auth/verify',
@@ -107,4 +109,7 @@ export const paths = {
   zoneStore: 'https://mui.com/store/items/zone-landing-page/',
   figmaPreview:
     'https://www.figma.com/file/X6OyiGHF8dnTk3aT38P0oN/%5BPreview%5D-Zone_Web.30.03.23?node-id=0-1',
+
+  // contentql
+  contentql: 'https://contentql.io',
 };

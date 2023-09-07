@@ -25,17 +25,9 @@ export default function HomeView() {
 
       <HomeHero />
 
-      <HomeNewStart />
-
-      <HomeFlexibleComponents />
-
-      <HomeFeatureHighlights />
-
-      <HomeForDesigner />
-
       <PricingHome plans={_pricingHome} />
 
-      <HomeFAQs />
+      {/* <HomeFAQs /> */}
 
       <HomeCombination />
 

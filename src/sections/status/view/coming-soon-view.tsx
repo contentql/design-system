@@ -16,11 +16,13 @@ import { useCountdown } from 'src/hooks/use-countdown';
 // ----------------------------------------------------------------------
 
 export default function ComingSoonView() {
-  const { days, hours, minutes, seconds } = useCountdown(new Date('07/07/2024 21:30'));
+  const { days, hours, minutes, seconds } = useCountdown(
+    new Date('10/07/2023 21:30'),
+  );
 
   return (
     <>
-      <Typography variant="h3" paragraph>
+      <Typography variant='h3' paragraph>
         Coming Soon!
       </Typography>
 
@@ -29,8 +31,8 @@ export default function ComingSoonView() {
       </Typography>
 
       <Image
-        alt="comingsoon"
-        src="/assets/illustrations/illustration_comingsoon.svg"
+        alt='comingsoon'
+        src='/assets/illustrations/illustration_comingsoon.svg'
         sx={{
           my: 3,
           mx: 'auto',
@@ -39,28 +41,33 @@ export default function ComingSoonView() {
       />
 
       <Stack
-        direction="row"
-        justifyContent="center"
+        direction='row'
+        justifyContent='center'
         divider={<Box sx={{ mx: { xs: 1, sm: 2.5 } }}>:</Box>}
         sx={{ typography: 'h2' }}
       >
-        <TimeBlock label="Days" value={days} />
+        <TimeBlock label='Days' value={days} />
 
-        <TimeBlock label="Hours" value={hours} />
+        <TimeBlock label='Hours' value={hours} />
 
-        <TimeBlock label="Minutes" value={minutes} />
+        <TimeBlock label='Minutes' value={minutes} />
 
-        <TimeBlock label="Seconds" value={seconds} />
+        <TimeBlock label='Seconds' value={seconds} />
       </Stack>
 
       <TextField
         fullWidth
         hiddenLabel
-        placeholder="Enter your email"
+        placeholder='Enter your email'
         InputProps={{
           endAdornment: (
-            <InputAdornment position="end">
-              <Button variant="contained" size="large" color="inherit" sx={{ mr: -1.25 }}>
+            <InputAdornment position='end'>
+              <Button
+                variant='contained'
+                size='large'
+                color='inherit'
+                sx={{ mr: -1.25 }}
+              >
                 Notify
               </Button>
             </InputAdornment>
@@ -69,7 +76,7 @@ export default function ComingSoonView() {
         sx={{ my: 5 }}
       />
 
-      <Stack direction="row" justifyContent="center">
+      <Stack direction='row' justifyContent='center'>
         {_socials.map((social) => (
           <IconButton key={social.value}>
             <Iconify icon={social.icon} sx={{ color: social.color }} />
