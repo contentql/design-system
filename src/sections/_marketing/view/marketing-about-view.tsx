@@ -28,15 +28,15 @@ export default function MarketingAboutView() {
 
       <MarketingTeamAbout members={_members} />
 
-      <MarketingAboutOurClients brands={_brandsColor} />
+      {/* <MarketingAboutOurClients brands={_brandsColor} /> */}
 
       <MarketingTestimonial testimonials={_testimonials} />
 
-      <MarketingLandingFaqs />
+      {/* <MarketingLandingFaqs /> */}
 
-      <MarketingLandingFreeSEO />
+      {/* <MarketingLandingFreeSEO /> */}
 
-      <MarketingNewsletter />
+      {/* <MarketingNewsletter /> */}
     </>
   );
 }

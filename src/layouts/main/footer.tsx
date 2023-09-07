@@ -206,6 +206,7 @@ export default function Footer() {
     </>
   );
 
+  return <footer>{simpleFooter}</footer>;
   return <footer>{isHome ? simpleFooter : mainFooter}</footer>;
 }
 
