@@ -43,44 +43,66 @@ export default function HomeHero() {
       }}
     >
       <Container sx={{ height: 1 }}>
-        <Grid container columnSpacing={3} alignItems="center" sx={{ height: 1 }}>
+        <Grid
+          container
+          columnSpacing={3}
+          alignItems='center'
+          sx={{ height: 1 }}
+        >
           <Grid xs={12} md={5}>
             <Stack
               spacing={5}
-              justifyContent="center"
+              justifyContent='center'
               alignItems={{ xs: 'center', md: 'flex-start' }}
               sx={{
                 py: 15,
                 textAlign: { xs: 'center', md: 'left' },
               }}
             >
-              <Typography variant="h1">
+              <Typography variant='h1'>
                 Create Your <br /> Website Today with
-                <Box component="span" sx={{ color: 'primary.main' }}>
-                  {` ZONE`}
+                <Box component='span' sx={{ color: 'primary.main' }}>
+                  {` ContentQL`}
                 </Box>
               </Typography>
 
               <Typography sx={{ color: 'text.secondary' }}>
-                The ZONE is built on top of MUI, a powerful library that provides flexible,
-                customizable, and easy-to-use components.
+                ContentQL is an open-source-based Architecture as a Service with
+                modern technologies that enables{' '}
+                <span className='underline underline-offset-4 decoration-2 font-semibold text-[#6E00FF]'>
+                  Product Development & Marketing
+                </span>{' '}
+                teams to{' '}
+                <span className='underline underline-offset-4 decoration-2 font-semibold text-[#6E00FF]'>
+                  work & control
+                </span>{' '}
+                the{' '}
+                <span className='underline underline-offset-4 decoration-2 font-semibold text-[#6E00FF]'>
+                  Product & Content
+                </span>{' '}
+                to be{' '}
+                <span className='underline underline-offset-4 decoration-2 font-semibold text-[#6E00FF]'>
+                  Delivered & Displayed
+                </span>{' '}
+                to the end users without worrying about a dedicated developer
+                team.
               </Typography>
 
-              <Button
-                color="inherit"
-                size="large"
-                variant="contained"
-                endIcon={<Iconify icon="carbon:launch" />}
-                target="_blank"
-                rel="noopener"
+              {/* <Button
+                color='inherit'
+                size='large'
+                variant='contained'
+                endIcon={<Iconify icon='carbon:launch' />}
+                target='_blank'
+                rel='noopener'
                 href={paths.figmaPreview}
               >
                 figma workspace
-              </Button>
+              </Button> */}
 
               <Stack spacing={3}>
-                <Typography variant="overline">AVAILABLE FOR</Typography>
-                <Stack direction="row" spacing={2.5}>
+                <Typography variant='overline'>Tech Stack</Typography>
+                <Stack direction='row' spacing={2.5}>
                   {['js', 'ts', 'figma', 'cra', 'nextjs'].map((icon) => (
                     <SvgColor
                       key={icon}
@@ -112,8 +134,8 @@ export default function HomeHero() {
           <Image
             visibleByDefault
             disabledEffect
-            alt="home hero"
-            src="/assets/images/home/home_hero.png"
+            alt='home hero'
+            src='/assets/images/home/home_hero.png'
           />
         </Box>
       )}
