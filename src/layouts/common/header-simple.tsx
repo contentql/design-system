@@ -3,6 +3,7 @@ import Stack from '@mui/material/Stack';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { useTheme } from '@mui/material/styles';
+import Button from '@mui/material/Button';
 
 import { bgBlur } from 'src/theme/css';
 import Logo from 'src/components/logo';
@@ -14,11 +15,14 @@ import { HEADER } from '../config-layout';
 
 import HeaderShadow from './header-shadow';
 import SettingsButton from './settings-button';
+import { useRouter } from 'src/routes/hooks';
+import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 
 export default function HeaderSimple() {
   const theme = useTheme();
+  const router = useRouter();
 
   const offsetTop = useOffSetTop(HEADER.H_DESKTOP);
 
@@ -47,17 +51,25 @@ export default function HeaderSimple() {
       >
         <Logo />
 
-        <Stack direction="row" alignItems="center" spacing={1}>
-          <SettingsButton />
+        <Stack direction='row' alignItems='center' spacing={1}>
+          {/* <SettingsButton /> */}
 
-          <Link
+          {/* <Link
             href={paths.support}
             component={RouterLink}
-            color="inherit"
+            color='inherit'
             sx={{ typography: 'subtitle2' }}
           >
             Need help?
-          </Link>
+          </Link> */}
+
+          <Button
+            variant='outlined'
+            startIcon={<Iconify icon='carbon:chevron-left' />}
+            onClick={() => router.back()}
+          >
+            Previous Page
+          </Button>
         </Stack>
       </Toolbar>
 
