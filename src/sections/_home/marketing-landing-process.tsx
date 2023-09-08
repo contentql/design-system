@@ -1,13 +1,14 @@
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
-import { alpha } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
 import SvgColor from 'src/components/svg-color';
 import { varFade, MotionViewport, varSlide } from 'src/components/animate';
 import { m } from 'framer-motion';
+import { bgGradient } from 'src/theme/css';
+import { alpha, useTheme } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
@@ -35,61 +36,79 @@ const SERVICES = [
 // ----------------------------------------------------------------------
 
 export default function MarketingLandingProcess() {
+  const theme = useTheme();
+
   return (
-    <Container
+    <Box
       sx={{
-        py: { xs: 5, md: 10 },
+        ...bgGradient({
+          color: alpha(theme.palette.background.default, 0.9),
+          imgUrl: '/assets/background/overlay_1.jpg',
+        }),
+        overflow: 'hidden',
+        position: 'relative',
+        // height: { md: `calc(100vh - ${HEADER.H_DESKTOP}px)` },
       }}
     >
-      <Stack
-        direction='row'
-        justifyContent='flex-start'
-        alignItems='flex-start'
+      <Container
+        sx={{
+          py: { xs: 5, md: 10 },
+
+          // ...bgGradient({
+          //   color: alpha(theme.palette.background.default, 0.9),
+          // }),
+        }}
       >
         <Stack
-          spacing={3}
+          direction='row'
+          justifyContent='flex-start'
+          alignItems='flex-start'
+        >
+          <Stack
+            spacing={3}
+            sx={{
+              maxWidth: 480,
+              mb: { xs: 8, md: 5 },
+              mx: { xs: 'auto', md: 'unset' },
+              textAlign: { xs: 'center', md: 'unset' },
+            }}
+            component={MotionViewport}
+          >
+            <m.div variants={varSlide().inRight}>
+              <Typography variant='h6' sx={{ color: 'text.disabled' }}>
+                Work Flow
+              </Typography>
+            </m.div>
+
+            <Typography variant='h2'>Working Process</Typography>
+
+            <Typography sx={{ color: 'text.secondary' }}>
+              Nunc nonummy metus. Donec elit libero, sodales nec, volutpat a,
+              suscipit non, turpis.
+            </Typography>
+          </Stack>
+        </Stack>
+        <Box
           sx={{
-            maxWidth: 480,
-            mb: { xs: 8, md: 5 },
-            mx: { xs: 'auto', md: 'unset' },
-            textAlign: { xs: 'center', md: 'unset' },
+            gap: 4,
+            display: 'grid',
+            alignItems: 'flex-end',
+            gridTemplateColumns: {
+              xs: 'repeat(1, 1fr)',
+              sm: 'repeat(2, 1fr)',
+              md: 'repeat(4, 1fr)',
+            },
           }}
           component={MotionViewport}
         >
-          <m.div variants={varSlide().inRight}>
-            <Typography variant='h6' sx={{ color: 'text.disabled' }}>
-              Work Flow
-            </Typography>
-          </m.div>
-
-          <Typography variant='h2'>Working Process</Typography>
-
-          <Typography sx={{ color: 'text.secondary' }}>
-            Nunc nonummy metus. Donec elit libero, sodales nec, volutpat a,
-            suscipit non, turpis.
-          </Typography>
-        </Stack>
-      </Stack>
-      <Box
-        sx={{
-          gap: 4,
-          display: 'grid',
-          alignItems: 'flex-end',
-          gridTemplateColumns: {
-            xs: 'repeat(1, 1fr)',
-            sm: 'repeat(2, 1fr)',
-            md: 'repeat(4, 1fr)',
-          },
-        }}
-        component={MotionViewport}
-      >
-        {SERVICES.map((service, index) => (
-          <m.div key={service.name} variants={varFade().inRight}>
-            <ServiceItem service={service} index={index} />
-          </m.div>
-        ))}
-      </Box>
-    </Container>
+          {SERVICES.map((service, index) => (
+            <m.div key={service.name} variants={varFade().inRight}>
+              <ServiceItem service={service} index={index} />
+            </m.div>
+          ))}
+        </Box>
+      </Container>
+    </Box>
   );
 }
 
