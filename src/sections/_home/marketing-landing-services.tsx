@@ -25,19 +25,19 @@ const SERVICES = [
     path: paths.marketing.services,
   },
   {
-    name: 'Email Marketing',
+    name: 'Tailored Frontend',
     icon: '/assets/icons/service/ic_service_mail.svg',
     content: 'Nunc nonummy metus. Donec elit libero',
     path: paths.marketing.services,
   },
   {
-    name: 'Search Engine Oprimization',
+    name: 'Content Management',
     icon: '/assets/icons/service/ic_service_analysis.svg',
     content: 'Nunc nonummy metus. Donec elit libero',
     path: paths.marketing.services,
   },
   {
-    name: 'Social Marketing',
+    name: 'Dedicated Developers',
     icon: '/assets/icons/service/ic_service_bullhorn.svg',
     content: 'Nunc nonummy metus. Donec elit libero',
     path: paths.marketing.services,
