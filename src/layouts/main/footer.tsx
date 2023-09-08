@@ -43,7 +43,8 @@ export default function Footer() {
 
   const pathname = usePathname();
 
-  const mobileList = navConfig.find((i) => i.title === 'Pages')?.children || [];
+  // const mobileList = navConfig.find((i) => i.title === 'Pages')?.children || [];
+  const mobileList: any = [];
 
   const desktopList = pageLinks.sort(
     (listA, listB) => Number(listA.order) - Number(listB.order),
