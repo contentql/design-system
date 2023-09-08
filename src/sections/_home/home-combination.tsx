@@ -19,16 +19,16 @@ export default function HomeCombination() {
   const visitBtn = (
     <m.div variants={varFade().inLeft}>
       <Button
-        size="large"
-        color="inherit"
-        variant="outlined"
-        target="_blank"
-        rel="noopener"
-        href={paths.minimalStore}
-        endIcon={<Iconify icon="carbon:chevron-right" width={16} />}
+        size='large'
+        color='inherit'
+        variant='outlined'
+        target='_blank'
+        rel='noopener'
+        href={paths.contentql}
+        endIcon={<Iconify icon='carbon:chevron-right' width={16} />}
         sx={{ ...(mdUp && { mt: 5 }) }}
       >
-        Visit Minimal Dashboard
+        Checkout
       </Button>
     </m.div>
   );
@@ -51,15 +51,15 @@ export default function HomeCombination() {
         }}
       >
         <m.div variants={varFade().inUp}>
-          <Typography variant="overline" sx={{ color: 'text.disabled' }}>
+          <Typography variant='overline' sx={{ color: 'text.disabled' }}>
             Perfect combination
           </Typography>
         </m.div>
 
         <m.div variants={varFade().inUp}>
-          <Typography variant="h3" sx={{ my: 3 }}>
+          <Typography variant='h3' sx={{ my: 3 }}>
             Looking For a <br />
-            Dashboard Template?
+            Performant CMS
           </Typography>
         </m.div>
 
@@ -74,7 +74,7 @@ export default function HomeCombination() {
               },
             }}
           >
-            Minimal UI Kit is a professional dashboard used by many of our clients.
+            ContentQL is a Headless CMS, with a full stack capabilities
           </Typography>
         </m.div>
 
@@ -91,8 +91,8 @@ export default function HomeCombination() {
       >
         <m.div variants={varFade().inDown}>
           <Image
-            alt="minimal dashboard"
-            src="/assets/images/home/minimal_dashboard.png"
+            alt='minimal dashboard'
+            src='/assets/images/home/minimal_dashboard.png'
             sx={{
               maxWidth: { md: 790 },
             }}

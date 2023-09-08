@@ -36,7 +36,7 @@ export default function MainLayout({ children }: Props) {
       <Header headerOnDark={actionPage(pathsOnDark)} />
 
       <Box
-        component="main"
+        component='main'
         sx={{
           flexGrow: 1,
         }}

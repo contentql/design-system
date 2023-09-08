@@ -1,16 +1,16 @@
+import MarketingAboutView from 'src/sections/_marketing/view/marketing-about-view';
 import MainLayout from 'src/layouts/main';
-import HomeView from 'src/sections/_home/view/home-view';
 
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'ContentQL',
+  title: 'About Us',
 };
 
-export default function HomePage() {
+export default function MarketingAboutPage() {
   return (
     <MainLayout>
-      <HomeView />
+      <MarketingAboutView />
     </MainLayout>
   );
 }

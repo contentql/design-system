@@ -23,8 +23,8 @@ export default function HomeAdvertisement() {
       }}
     >
       <Stack
-        alignItems="center"
-        justifyContent="center"
+        alignItems='center'
+        justifyContent='center'
         sx={{
           p: 2.5,
           zIndex: 9,
@@ -33,22 +33,22 @@ export default function HomeAdvertisement() {
           color: 'common.white',
         }}
       >
-        <Typography variant="h1" component="h2" sx={{ opacity: 0.48 }}>
+        <Typography variant='h1' component='h2' sx={{ opacity: 0.48 }}>
           Start Now
         </Typography>
 
-        <Typography variant="h1" component="h2" sx={{ mb: 8 }}>
+        <Typography variant='h1' component='h2' sx={{ mb: 8 }}>
           Create Your
           <br /> Website Today
         </Typography>
 
         <Button
-          size="large"
-          variant="contained"
-          target="_blank"
-          rel="noopener"
-          color="primary"
-          href={paths.zoneStore}
+          size='large'
+          variant='contained'
+          // target='_blank'
+          rel='noopener'
+          color='primary'
+          href={'#'}
         >
           Purchase Now
         </Button>

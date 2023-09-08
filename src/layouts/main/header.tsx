@@ -22,6 +22,7 @@ import SettingsButton from '../common/settings-button';
 import NavMobile from './nav/mobile';
 import NavDesktop from './nav/desktop';
 import { navConfig } from './config-navigation';
+import { RouterLink } from 'src/routes/components';
 
 // ----------------------------------------------------------------------
 
@@ -62,49 +63,55 @@ export default function Header({ headerOnDark }: Props) {
         }}
       >
         <Container
-          sx={{ height: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
+          sx={{
+            height: 1,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
         >
           <Box sx={{ lineHeight: 0, position: 'relative' }}>
             <Logo />
 
-            <Link href="https://zone-docs.vercel.app/changelog" target="_blank" rel="noopener">
+            <Link href='#' rel='noopener'>
               <Label
-                color="info"
+                color='info'
                 sx={{
                   ml: 0.5,
                   px: 0.5,
-                  top: -14,
-                  left: 60,
+                  top: -8,
+                  left: 40,
                   height: 20,
                   fontSize: 11,
                   cursor: 'pointer',
                   position: 'absolute',
                 }}
               >
-                v2.1.0
+                v1.1.0
               </Label>
             </Link>
           </Box>
 
           {mdUp && <NavDesktop data={navConfig} />}
 
-          <Stack spacing={2} direction="row" alignItems="center" justifyContent="flex-end">
-            <Stack spacing={1} direction="row" alignItems="center">
-              <Searchbar />
+          <Stack
+            spacing={2}
+            direction='row'
+            alignItems='center'
+            justifyContent='flex-end'
+          >
+            <Stack spacing={1} direction='row' alignItems='center'>
+              {/* <Searchbar /> */}
 
-              <SettingsButton />
+              {/* <SettingsButton /> */}
             </Stack>
 
             {mdUp && (
-              <Button
-                variant="contained"
-                color="inherit"
-                href={paths.zoneStore}
-                target="_blank"
-                rel="noopener"
-              >
-                Buy Now
-              </Button>
+              <Link component={RouterLink} href={paths.login}>
+                <Button variant='contained' color='inherit'>
+                  Login
+                </Button>
+              </Link>
             )}
           </Stack>
 

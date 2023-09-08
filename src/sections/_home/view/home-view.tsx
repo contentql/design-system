@@ -14,6 +14,8 @@ import HomeAdvertisement from '../home-advertisement';
 import PricingHome from '../../pricing/home/pricing-home';
 import HomeFeatureHighlights from '../home-feature-highlights';
 import HomeFlexibleComponents from '../home-flexible-components';
+import MarketingLandingServices from '../marketing-landing-services';
+import MarketingLandingProcess from '../marketing-landing-process';
 
 // ----------------------------------------------------------------------
 
@@ -25,17 +27,13 @@ export default function HomeView() {
 
       <HomeHero />
 
-      <HomeNewStart />
+      <MarketingLandingServices />
 
-      <HomeFlexibleComponents />
-
-      <HomeFeatureHighlights />
-
-      <HomeForDesigner />
+      <MarketingLandingProcess />
 
       <PricingHome plans={_pricingHome} />
 
-      <HomeFAQs />
+      {/* <HomeFAQs /> */}
 
       <HomeCombination />
 

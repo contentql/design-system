@@ -13,10 +13,10 @@ import { RouterLink } from 'src/routes/components';
 // ----------------------------------------------------------------------
 
 const LISTS = [
-  'First Class Flights',
-  '5 Star Accommodations',
-  'Inclusive Packages',
-  'Latest Model Vehicles',
+  'Responsive Website',
+  'Admin Panel',
+  'Automation',
+  'Developer Support Team',
 ];
 
 // ----------------------------------------------------------------------
@@ -29,26 +29,37 @@ export default function MarketingServices() {
         pb: { xs: 5, md: 10 },
       }}
     >
-      <Grid container spacing={3} justifyContent="space-between" alignItems="center">
+      <Grid
+        container
+        spacing={3}
+        justifyContent='space-between'
+        alignItems='center'
+      >
         <Grid xs={12} md={6} lg={5}>
-          <Image alt="services" src="/assets/illustrations/illustration_services.svg" />
+          <Image
+            alt='services'
+            src='/assets/illustrations/illustration_services.svg'
+          />
         </Grid>
 
         <Grid xs={12} md={6} lg={6}>
           <Stack spacing={3} sx={{ mb: 5 }}>
-            <Typography variant="h2">Offline SEO</Typography>
+            <Typography variant='h2'>Modern Web Apps</Typography>
 
             <Typography sx={{ color: 'text.secondary' }}>
-              Aenean commodo ligula eget dolor. Sed hendrerit. Vestibulum ante ipsum primis in
-              faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer
-              lacinia.
+              Though ContentQL helps the product team take control of the data
+              displayed to their end users, one can still expand product
+              delivery capabilities to your consumers by integrating dedicated
+              React and GraphQL developers. Every piece of software we use is an
+              open-source tool that is contributed daily from around the world,
+              which keeps your website on par with modern development standards
             </Typography>
 
             <Stack spacing={2}>
               {LISTS.map((text) => (
-                <Stack key={text} direction="row" alignItems="center">
+                <Stack key={text} direction='row' alignItems='center'>
                   <Box
-                    component="span"
+                    component='span'
                     sx={{
                       mr: 2,
                       width: 6,
@@ -66,10 +77,10 @@ export default function MarketingServices() {
           <Button
             component={RouterLink}
             href={paths.marketing.caseStudies}
-            size="large"
-            color="inherit"
-            variant="outlined"
-            endIcon={<Iconify icon="carbon:chevron-right" />}
+            size='large'
+            color='inherit'
+            variant='outlined'
+            endIcon={<Iconify icon='carbon:chevron-right' />}
           >
             Check Our Work
           </Button>

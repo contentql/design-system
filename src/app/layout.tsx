@@ -12,33 +12,33 @@ import { SettingsDrawer, SettingsProvider } from 'src/components/settings';
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'Zone UI Kit',
+  title: 'ContentQL Website',
   description:
-    'The ZONE is built on top of MUI, a powerful library that provides flexible, customizable, and easy-to-use components.',
-  keywords: 'react,material,kit,application,dashboard,admin,template',
+    'We swiftly integrate and enhance your teams productivity and can be your dedicated tech team',
+  keywords: 'contentql, CMS, Headless CMS, Website Maker, GraphQL API',
   themeColor: '#000000',
   manifest: '/manifest.json',
   icons: [
     {
       rel: 'icon',
-      url: '/favicon/favicon.ico',
+      url: '/favicon/favicon.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-      url: '/favicon/favicon-16x16.png',
+      url: '/favicon/favicon.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
-      url: '/favicon/favicon-32x32.png',
+      url: '/favicon/favicon.png',
     },
     {
       rel: 'apple-touch-icon',
       sizes: '180x180',
-      url: '/favicon/apple-touch-icon.png',
+      url: '/favicon/favicon.png',
     },
   ],
 };
@@ -62,7 +62,7 @@ export default function RootLayout({ children }: Props) {
             <ThemeProvider>
               <MotionLazy>
                 <ProgressBar />
-                <SettingsDrawer />
+                {/* <SettingsDrawer /> */}
                 {children}
               </MotionLazy>
             </ThemeProvider>
